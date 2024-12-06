@@ -30,7 +30,7 @@ const HomeCards = (props) => {
         <div className="mt-auto flex flex-row items-center">
           <input
             placeholder="Enter Room ID"
-            className="w-[90%] rounded-full border-2 border-gray-800 bg-neutral-800 p-2 text-center text-gray-400"
+            className="w-[90%] rounded-full border-2 border-gray-800 bg-neutral-800 p-2 text-center font-mono text-gray-400"
           />
           <button className="h-15 min-w-sm mx-2 flex max-w-sm items-center justify-center rounded-full px-2">
             <img
