@@ -16,14 +16,14 @@ const GenerateRoom = () => {
   };
 
   return (
-    <div className="mx-10 my-5 flex flex-col items-center justify-center rounded-3xl bg-neutral-800 p-6">
+    <div className="mx-10 my-5 flex flex-col items-center justify-center rounded-3xl bg-neutral-800 py-6">
       {/* Title */}
       <div className="mb-4 font-doto text-2xl text-white">
         Generate Room ID:
       </div>
 
       {/* Input and Buttons */}
-      <div className="flex w-full max-w-2xl items-center space-x-4">
+      <div className="flex w-full max-w-2xl flex-wrap items-center gap-4">
         {/* Read-only Input */}
         <input
           type="text"

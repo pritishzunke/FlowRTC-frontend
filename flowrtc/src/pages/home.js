@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-neutral-900">
       <div className="container mx-auto p-4">
-        <div className="p-10 font-doto text-3xl text-white md:text-6xl">
+        <div className="p-10 font-doto text-6xl text-white md:text-6xl">
           FlowRTC
         </div>
         <div className="p-10 font-doto text-lg text-white">
