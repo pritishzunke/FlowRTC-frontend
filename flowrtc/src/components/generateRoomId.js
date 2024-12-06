@@ -9,17 +9,51 @@ const GenerateRoom = () => {
     setRoomId(newRoomId);
   };
 
-  // Function to copy Room ID to clipboard
+  // Function to copy Room ID to clipboard with fallback for mobile
   const copyToClipboard = () => {
-    navigator.clipboard.writeText(roomId);
-    alert("Room ID copied to clipboard!");
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard
+        .writeText(roomId)
+        .then(() => {
+          alert("Room ID copied to clipboard!");
+        })
+        .catch((err) => {
+          console.error("Failed to copy to clipboard: ", err);
+          fallbackCopyToClipboard(roomId);
+        });
+    } else {
+      fallbackCopyToClipboard(roomId);
+    }
+  };
+
+  // Fallback function for copying to clipboard
+  const fallbackCopyToClipboard = (text) => {
+    const textarea = document.createElement("textarea");
+    textarea.value = text;
+    textarea.style.position = "fixed"; // Prevent scrolling to the bottom of the page
+    textarea.style.opacity = "0"; // Hide the element
+    document.body.appendChild(textarea);
+    textarea.select();
+    try {
+      const successful = document.execCommand("copy");
+      if (successful) {
+        alert("Room ID copied to clipboard!");
+      } else {
+        alert("Failed to copy Room ID. Please copy it manually.");
+      }
+    } catch (err) {
+      console.error("Fallback: Unable to copy", err);
+      alert("Failed to copy Room ID. Please copy it manually.");
+    } finally {
+      document.body.removeChild(textarea);
+    }
   };
 
   return (
     <div className="mx-10 my-5 flex flex-col items-center justify-center rounded-3xl bg-neutral-800 py-6">
       {/* Title */}
       <div className="mb-4 font-doto text-2xl text-white">
-        Generate Room ID:
+        Generate Room ID (optional)
       </div>
 
       {/* Input and Buttons */}

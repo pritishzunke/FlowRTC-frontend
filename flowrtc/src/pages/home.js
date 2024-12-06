@@ -19,6 +19,11 @@ const Home = () => {
             flowRTC empowers users to connect and share content instantly,
             without the need for central servers or third-party intermediaries.
           </p>
+          <p className="mt-5 text-xl text-red-400">
+            Note: If You already have a Room code you can directly join by
+            entering the code in the Enter Room ID field, if not use the below
+            widget to generate a unique room ID.
+          </p>
         </div>
 
         <GenerateRoom></GenerateRoom>
