@@ -24,7 +24,7 @@ const HomeCards = (props) => {
         {/* Conditional Message Content */}
         <div className="mb-10 text-left font-mono">
           {messageContent.map((item, index) => (
-            <div key={index}>
+            <div key={index} className="mb-3">
               <strong>{item.title}</strong>
               {/* Only show the full content for `lg` screens and above */}
               <p className="hidden lg:block">{item.text}</p>
@@ -40,7 +40,7 @@ const HomeCards = (props) => {
           />
           <button className="h-15 mx-auto flex items-center justify-center rounded-full px-2 sm:mx-0">
             <img
-              className="h-10 w-10 transform transition-transform duration-200 hover:scale-110"
+              className="h-10 w-10 transform transition-transform duration-200 hover:scale-125"
               src={joinLogo}
               alt="Join Room"
             />

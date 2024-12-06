@@ -50,7 +50,7 @@ const GenerateRoom = () => {
   };
 
   return (
-    <div className="mx-10 my-5 flex flex-col items-center justify-center rounded-3xl bg-neutral-800 py-6">
+    <div className="mx-10 my-5 flex flex-col items-center justify-center rounded-3xl bg-neutral-800 p-6">
       {/* Title */}
       <div className="mb-4 font-doto text-2xl text-white">
         Generate Room ID (optional)
