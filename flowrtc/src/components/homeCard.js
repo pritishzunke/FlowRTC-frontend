@@ -18,7 +18,7 @@ const HomeCards = (props) => {
       <div className="m-5 flex flex-col rounded-xl bg-white p-5 sm:w-2/3">
         {/* Heading */}
         <div className="mb-7 text-center sm:text-left">
-          <h1 className="text-2xl font-bold">{messageHeading}</h1>
+          <h1 className="font-mono text-2xl font-bold">{messageHeading}</h1>
         </div>
 
         {/* Conditional Message Content */}
