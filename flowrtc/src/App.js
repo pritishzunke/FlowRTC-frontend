@@ -2,6 +2,7 @@
 // import { io } from "socket.io-client";
 // import Landing from "./pages/landing";
 
+import FileTransferRoom from "./pages/fileTransferRoom";
 import Home from "./pages/home";
 
 // import Home from "./pages/home";
@@ -17,7 +18,8 @@ const App = () => {
   //   };
   // }, []);
   // // return <Landing socket={socket} />;
-  return <Home />;
+  // return <Home />;
+  return <FileTransferRoom />;
 };
 
 export default App;
