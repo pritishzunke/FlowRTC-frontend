@@ -11,7 +11,7 @@ const FileTransferRoom = () => {
         <div className="ml-10 p-5 font-doto text-xl text-white md:text-3xl">
           Room Details: fgghvjbNLM
         </div>
-        <button className="duration-400 ml-14 h-10 rounded-full bg-red-900 p-5 px-6 py-2 text-sm font-medium text-white shadow-lg transition hover:bg-red-600 hover:shadow-xl active:scale-110 md:ml-0">
+        <button className="ml-14 h-10 rounded-full bg-red-900 p-5 px-6 py-2 text-sm font-medium text-white shadow-lg transition duration-1000 hover:bg-red-600 hover:shadow-xl active:scale-110 md:ml-0">
           Leave Room
         </button>
       </div>
@@ -25,7 +25,7 @@ const FileTransferRoom = () => {
           </div>
           <div className="flex flex-col">
             <img src={man2Image} alt="man2" className="max-h-44 grayscale" />
-            <p className="p-2 text-center font-doto text-white">
+            <p className="animate-pulse p-2 text-center font-doto text-white">
               connecting...
             </p>
           </div>
